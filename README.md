@@ -24,14 +24,14 @@ It combines a clean public marketplace with powerful role-based dashboards for *
 
 ##  UI Preview
 
-### Landing Page
+### Admin Dashboard
 ![landing page](https://github.com/tayyab007-dot/property-management-system/blob/main/Admin%20dashboard.png?raw=true)
 
 ### Property Details
 ![property detail](https://github.com/tayyab007-dot/property-management-system/blob/main/property%20details.png?raw=true)
 
-### Admin Dashboard
-![admin dashbaord](https://github.com/tayyab007-dot/property-management-system/blob/main/property%20details.png?raw=true)
+### Landing Page
+![landing page](https://github.com/tayyab007-dot/property-management-system/blob/main/landing%20page.png?raw=true)
 
 ### Admin Dashboard Property Management
 ![dashboard management](https://github.com/tayyab007-dot/property-management-system/blob/main/properties%20management.png?raw=true)
