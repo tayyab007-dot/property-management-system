@@ -1,3 +1,137 @@
+# 🏡 RealEstate Pro
+
+**Enterprise-Grade Real Estate Marketplace built with Laravel (TALL Stack)**
+
+RealEstate Pro is a full-stack property management application engineered to handle **Buy, Sell, and Rent** workflows for modern real estate agencies. It integrates a public marketplace with role-based administrative dashboards for **Admins** and **Agents**, placing emphasis on security, scalability, and real-time interactive user experience.
+
+> Designed and built as a production-oriented portfolio showcase rather than a basic CRUD application.
+
+---
+
+## 🌟 Key Highlights
+
+- **Role-Based Access Control (RBAC):** Granular authorization powered by `spatie/laravel-permission`.
+- **Reactive Interfaces:** Real-time state management and dynamic UI updates via **Laravel Livewire** and **Alpine.js** without page reloads.
+- **Multi-Tenant Dashboards:** Isolated management portals for System Administrators and Real Estate Agents.
+- **Advanced Filtering & Search:** Multi-parameter property queries (Price, Location, Category, Amenities).
+- **Lead Capture System:** Direct customer inquiry funnel supporting Email and WhatsApp routing.
+- **Database Architecture:** Relational schema with foreign keys, indexes, and full database seeders for instant local deployment.
+
+---
+
+## 🖥️ UI Preview
+
+| Public Landing Page | Property Details View |
+| :---: | :---: |
+| ![Landing Page](landing%20page.png) | ![Property Details](property%20details.png) |
+
+| Admin Control Center | Property Listing Management |
+| :---: | :---: |
+| ![Admin Dashboard](Admin%20dashboard.png) | ![Property Management](properties%20management.png) |
+
+---
+
+## 🛠️ Tech Stack & System Architecture
+
+             +-----------------------------------+
+             |           Client Layer            |
+             |  Tailwind CSS | Alpine.js | Blade |
+             +-----------------+-----------------+
+                               |
+                               v
+             +-----------------------------------+
+             |         Application Layer         |
+             |      Laravel 11  |  Livewire      |
+             +-----------------+-----------------+
+                               |
+                               v
+             +-----------------------------------+
+             |          Data & Storage           |
+             |  MySQL  |  Laravel Public Storage |
+             +-----------------------------------+
+
+| Layer | Technology / Package | Function |
+| :--- | :--- | :--- |
+| **Backend Framework** | Laravel 11 | Core business logic, routing, and ORM |
+| **Frontend Reactive** | Livewire v3 | Dynamic component state updates |
+| **Client Interactivity**| Alpine.js | Lightweight DOM interactions |
+| **UI Styling** | Tailwind CSS + Bootstrap | Responsive dashboard layout and components |
+| **Access Control** | Spatie Laravel-Permission | Middleware, gate authorization, and role management |
+| **Database** | MySQL | Relational data persistence |
+
+---
+
+## 👥 User Roles & Access Matrix
+
+The system enforces authorization policies using Spatie gates and Laravel middleware.
+
+| Feature / Action | Guest / Visitor | Agent | Admin |
+| :--- | :---: | :---: | :---: |
+| Browse & Search Listings | ✅ | ✅ | ✅ |
+| Submit Inquiries / Leads | ✅ | ✅ | ✅ |
+| Manage Personal Listings | ❌ | ✅ | ✅ |
+| View Agent Dashboard | ❌ | ✅ | ✅ |
+| Global User & Role Management | ❌ | ❌ | ✅ |
+| Platform Analytics & Audit | ❌ | ❌ | ✅ |
+
+---
+
+## 🧩 Core Modules
+
+### 1. Public Marketplace
+* Dynamic multi-criteria filtering by property type, city, price range, and bedroom/bathroom count.
+* Detailed listing views complete with image galleries, agent contact info, and amenity specs.
+* Lead capture forms integrated with phone and email validation.
+
+### 2. Admin Portal
+* System-wide platform control over users, agents, and property approvals.
+* Management of agency verification and licensing state.
+* Global inquiry tracking system with status tags.
+
+### 3. Agent Operations Portal
+* Dedicated workspace for agents to create, update, and manage property portfolios.
+* Strict query scoping ensuring agents access and edit **only** their assigned listings.
+
+---
+
+## 🚀 Installation & Local Setup
+
+### Prerequisites
+* PHP 8.2 or higher
+* Composer
+* Node.js (v18+) & NPM
+* MySQL Database
+
+### Setup Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone [https://github.com/tayyab007-dot/property-management-system.git](https://github.com/tayyab007-dot/property-management-system.git)
+   cd property-management-system
+Install PHP & Node DependenciesBashcomposer install
+npm install
+Configure Environment VariablesBashcp .env.example .env
+php artisan key:generate
+Update the .env file with your local database credentials:Code snippetDB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=realestate_db
+DB_USERNAME=root
+DB_PASSWORD=
+Run Migrations & SeedersBashphp artisan migrate --seed
+php artisan storage:link
+Build Assets & Start ServerBashnpm run build
+php artisan serve
+Access the application at http://localhost:8000.🔐 Demo CredentialsRoleEmailPasswordAdminadmin@example.compasswordAgentagent@example.compassword🔮 Future Enhancements[ ] Map-based spatial property search using Leaflet.js or Google Maps API.[ ] Direct messaging module between buyers and listing agents.[ ] Financial calculator for mortgage and payment estimation.[ ] REST API endpoints for companion mobile applications.👨‍💻 AuthorMuhammad TayyabFull-Stack Web DeveloperGitHub: @tayyab007-dotSpecialization: Web Application Architecture, Laravel, Livewire, and Security Research.
+
+
+
+
+
+
+
+
+
 #  RealEstate Pro  
 
 **Enterprise-Grade Real Estate Marketplace built with Laravel (TALL Stack)**
